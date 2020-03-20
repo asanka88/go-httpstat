@@ -52,8 +52,10 @@ type Result struct {
 	isReused bool
 }
 
-func (r *Result) durations() map[string]time.Duration {
-	return map[string]time.Duration{
+// Durations returns a map[string]time.Duration
+// to allow for alternative methods of formatting the results
+func (r *Result) Durations() map[string]time.Duration {
+	return mapstring]time.Duration{
 		"DNSLookup":        r.DNSLookup,
 		"TCPConnection":    r.TCPConnection,
 		"TLSHandshake":     r.TLSHandshake,
