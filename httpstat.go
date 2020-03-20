@@ -113,7 +113,7 @@ func (r Result) Format(s fmt.State, verb rune) {
 
 		fallthrough
 	case 's', 'q':
-		d := r.durations()
+		d := r.Durations()
 		list := make([]string, 0, len(d))
 		for k, v := range d {
 			// Handle when End function is not called
