@@ -55,7 +55,7 @@ type Result struct {
 // Durations returns a map[string]time.Duration
 // to allow for alternative methods of formatting the results
 func (r *Result) Durations() map[string]time.Duration {
-	return mapstring]time.Duration{
+	return map[string]time.Duration{
 		"DNSLookup":        r.DNSLookup,
 		"TCPConnection":    r.TCPConnection,
 		"TLSHandshake":     r.TLSHandshake,
