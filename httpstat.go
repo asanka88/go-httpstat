@@ -68,6 +68,22 @@ func (r *Result) durations() map[string]time.Duration {
 	}
 }
 
+func (r *Result) Fields() map[string]interface{} {
+	return map[string]interface{}{
+		"DNSLookup":        r.DNSLookup,
+		"TCPConnection":    r.TCPConnection,
+		"TLSHandshake":     r.TLSHandshake,
+		"ServerProcessing": r.ServerProcessing,
+		"ContentTransfer":  r.contentTransfer,
+
+		"NameLookup":    r.NameLookup,
+		"Connect":       r.Connect,
+		"Pretransfer":   r.Connect,
+		"StartTransfer": r.StartTransfer,
+		"Total":         r.total,
+	}
+}
+
 // Format formats stats result.
 func (r Result) Format(s fmt.State, verb rune) {
 	switch verb {
