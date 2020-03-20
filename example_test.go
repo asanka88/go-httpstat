@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/digitaljanitors/go-httpstat"
+	"github.com/tcnksm/go-httpstat"
 )
 
 func Example() {

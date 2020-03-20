@@ -68,7 +68,7 @@ func TestHTTPStat_HTTPS(t *testing.T) {
 		t.Fatal("isTLS should be true")
 	}
 
-	for k, d := range result.Durations() {
+	for k, d := range result.durations() {
 		if d <= 0*time.Millisecond {
 			t.Fatalf("expect %s to be non-zero", k)
 		}
@@ -100,7 +100,7 @@ func TestHTTPStat_HTTP(t *testing.T) {
 	}
 
 	// Except TLS should be non zero
-	durations := result.Durations()
+	durations := result.durations()
 	delete(durations, "TLSHandshake")
 
 	for k, d := range durations {
