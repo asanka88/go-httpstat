@@ -1,6 +1,6 @@
 # go-httpstat [![Go Documentation](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)][godocs] [![Build Status](http://img.shields.io/travis/tcnksm/go-httpstat.svg?style=flat-square)][travis] [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)][license] 
 
-[godocs]: http://godoc.org/github.com/tcnksm/go-httpstat
+[godocs]: http://godoc.org/github.com/digitaljanitors/go-httpstat
 [travis]: https://travis-ci.org/tcnksm/go-httpstat
 [license]: /LICENSE
 
@@ -15,7 +15,7 @@ See usage and example on [GoDoc][godocs].
 Use `go get`,
 
 ```bash
-$ go get github.com/tcnksm/go-httpstat
+$ go get github.com/digitaljanitors/go-httpstat
 ```
 
 ## Author
