@@ -74,17 +74,19 @@ func (r *Result) durations() map[string]time.Duration {
 
 func (r *Result) Fields() map[string]interface{} {
 	return map[string]interface{}{
-		"DNSLookup":        r.DNSLookup,
-		"TCPConnection":    r.TCPConnection,
-		"TLSHandshake":     r.TLSHandshake,
-		"ServerProcessing": r.ServerProcessing,
-		"ContentTransfer":  r.ContentTransfer,
+		"DNSLookup":        r.DNSLookup.Milliseconds(),
+		"TCPConnection":    r.TCPConnection.Milliseconds(),
+		"TLSHandshake":     r.TLSHandshake.Milliseconds(),
+		"ServerProcessing": r.ServerProcessing.Milliseconds(),
+		"ContentTransfer":  r.ContentTransfer.Milliseconds(),
 
-		"NameLookup":    r.NameLookup,
-		"Connect":       r.Connect,
-		"Pretransfer":   r.Connect,
-		"StartTransfer": r.StartTransfer,
-		"Total":         r.Total,
+		"NameLookup":    r.NameLookup.Milliseconds(),
+		"Connect":       r.Connect.Milliseconds(),
+		"Pretransfer":   r.Connect.Milliseconds(),
+		"StartTransfer": r.StartTransfer.Milliseconds(),
+		"Total":         r.Total.Milliseconds(),
+
+		"ConnectedTo": r.ConnectedTo,
 	}
 }
 
